@@ -1,0 +1,43 @@
+{
+  "colorList": [
+    {
+      "id": 2,
+      "category": "a",
+      "list": [
+        {
+          "category": "a",
+          "name": "dd",
+          "red": "243",
+          "green": "233",
+          "blue": 30
+        },
+        {
+          "category": "a",
+          "name": "23",
+          "red": "23",
+          "green": "230",
+          "blue": "03"
+        },
+        {
+          "category": "a",
+          "name": "23",
+          "red": "230",
+          "green": "23",
+          "blue": "03"
+        }
+      ]
+    },
+    {
+        "category": "aa",
+        "list": [
+          {
+            "category": "aa",
+            "name": "a",
+            "red": "30",
+            "green": "023",
+            "blue": "30"
+          }
+        ]
+    }
+  ]
+}
