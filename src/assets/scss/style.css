@@ -54,12 +54,8 @@ table {
 
 body {
   font-family: proxima-nova, sans-serif;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/img3.jpg) repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/img3.jpg) repeat;
-}
-
-html {
-  font-family: cursive;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#d9afd9), to(#97d9e1));
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
 }
 
 .outer-wrap {
@@ -96,6 +92,7 @@ html {
 }
 
 .outer-wrap .side-bar p {
+  font-family: fantasy,monospace;
   font-size: 1.1rem;
   text-align: center;
   padding: 10px;
@@ -103,6 +100,7 @@ html {
 }
 
 .outer-wrap .side-bar label {
+  font-family: fantasy,monospace;
   font-size: small;
   text-align: center;
   padding: 10px;
@@ -124,6 +122,7 @@ html {
 }
 
 .outer-wrap .side-bar .btn {
+  font-family: fantasy,monospace;
   border-width: 2px;
   border-style: inset;
   border-color: #bebebe;
@@ -144,6 +143,7 @@ html {
 }
 
 .outer-wrap .main-body .all-categories .categories {
+  font-family: fantasy,monospace;
   text-decoration: none;
   padding: 10px;
   color: black;
@@ -185,7 +185,7 @@ html {
   border-radius: 50% 20% / 10% 40%;
   padding-top: 5px;
   width: 220px;
-  height: 280px;
+  height: 290px;
 }
 
 .outer-wrap .main-body .all-the-color .card .color-box-editing {
@@ -196,8 +196,8 @@ html {
 }
 
 .outer-wrap .main-body .all-the-color .card .color-box {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   margin: auto;
   border-radius: 10px;
 }
@@ -211,8 +211,10 @@ html {
 }
 
 .outer-wrap .main-body .all-the-color .card .card-body p {
+  font-family: fantasy,monospace;
+  font-size: 22px;
   margin: auto;
-  padding: 5px;
+  padding: 20px;
   color: #696969;
 }
 
@@ -221,12 +223,14 @@ html {
 }
 
 .outer-wrap .main-body .all-the-color .card .card-body-editing p {
+  font-family: fantasy,monospace;
   margin: auto;
   text-align: center;
   color: #696969;
 }
 
 .outer-wrap .main-body .all-the-color .card .btn {
+  font-family: fantasy,monospace;
   margin: auto;
   border-width: 1px;
   border-style: inset;
@@ -235,6 +239,7 @@ html {
 }
 
 .outer-wrap .main-body .all-the-color .card label {
+  font-family: fantasy,monospace;
   padding: 5px;
 }
 

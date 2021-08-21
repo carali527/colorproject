@@ -1,24 +1,5 @@
 # colorproject
 
-## Project setup
-```
-npm install
-```
+## 能夠給予顏色名稱以及將其分組，方便設計配色使用
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 使用CRUD API

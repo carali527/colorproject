@@ -49,11 +49,11 @@ table {
 
 body{
 	font-family: proxima-nova, sans-serif;
-	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/img3.jpg) repeat;
-}
-
-html{
-	font-family:cursive;
+	// background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+	// background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+	//background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+	background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+	
 }
 
 
@@ -79,12 +79,14 @@ html{
 		background-color: #f4f5f7;
 		border-color:#F5F5F5;
 		p{
+			font-family:fantasy,monospace;
 			font-size: 1.1rem;
 			text-align: center;
 			padding: 10px;
 			color: #696969;
 		}
 		label{
+			font-family:fantasy,monospace;
 			font-size: small;
 			text-align: center;
 			padding:10px;
@@ -107,6 +109,7 @@ html{
 		}
 
 		.btn{
+			font-family:fantasy,monospace;
 			border-width:2px;
 			border-style:inset;
 			border-color:#bebebe;
@@ -123,6 +126,7 @@ html{
 		.all-categories{
 			padding: 10px;
 			.categories{
+				font-family:fantasy,monospace;
 				text-decoration:none;
 				padding: 10px;
 				color: black;
@@ -152,7 +156,7 @@ html{
 				border-radius: 50% 20% / 10% 40%;
 				padding-top: 5px;
 				width: 220px;
-				height: 280px;
+				height: 290px;
 				.color-box-editing{
 					width: 90px;
 					height: 7px;
@@ -160,8 +164,9 @@ html{
 					border-radius:10px;
 				}
 				.color-box{
-					width: 80px;
-					height: 80px;
+					width:120px;
+					height:120px;
+					//border-radius: 50%;
 					margin: auto;
 					border-radius: 10px;
 				}
@@ -173,20 +178,24 @@ html{
 				}
 				.card-body{
 					p{
+						font-family:fantasy,monospace;
+						font-size:22px;
 						margin: auto;
-						padding: 5px;
+						padding: 20px;
 						color: #696969;
 					}
 				}
 				.card-body-editing{
 					margin-bottom: 10px;
 					p{
+						font-family:fantasy,monospace;
 						margin: auto;
 						text-align: center;
 						color: #696969;
 					}
 				}
 				.btn{
+					font-family:fantasy,monospace;
 					margin: auto;
 					border-width:1px;
 					border-style:inset;
@@ -195,6 +204,7 @@ html{
 
 				}
 				label{
+					font-family:fantasy,monospace;
 					padding: 5px;
 				}
 			}

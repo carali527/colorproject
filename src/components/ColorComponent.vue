@@ -1,10 +1,7 @@
 <template>
   <slot></slot>
   <div class="card-body">
-    <p>Name：{{ item.name }}</p>
-    <p>Red：{{ item.red }}</p>
-    <p>Green：{{ item.green }}</p>
-    <p>Blue：{{ item.blue }}</p>
+    <p>{{ item.name }}</p>
     <button class="btn" @click="editedTheColors">edit</button>
     <button class="btn" @click="deleteTheColor">delete</button>
   </div>
@@ -28,5 +25,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

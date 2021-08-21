@@ -53,16 +53,16 @@
 
 <script>
 export default {
-    props: ['editedName','editedRed','editedGreen','editedBlue','editing'],
+    props: ['editedName','editedRed','editedGreen','editedBlue'],
     emits: ["editingCancel","completeColorItem","update:editedName","update:editedRed","update:editedGreen","update:editedBlue"],
     methods: {
         completeColorItem() {
-        this.$emit("completeColorItem", {
-            editedRed: this.editedRed,
-            editedGreen: this.editedGreen,
-            editedBlue: this.editedBlue,
-            editedName: this.editedName
-        });
+          this.$emit("completeColorItem", {
+              editedRed: this.editedRed,
+              editedGreen: this.editedGreen,
+              editedBlue: this.editedBlue,
+              editedName: this.editedName
+          });
         },
         editingCancel() {
             this.$emit("editingCancel", {
@@ -75,6 +75,3 @@ export default {
     }
 };
 </script>
-
-<style>
-</style>

@@ -1,7 +1,7 @@
 <template>
   <div class="outer-wrap">
     <div class="side-bar">
-      <p>Your Soul Color</p>
+      <p>Color Scheme</p>
       <div
         class="show-color"
         :style="{
@@ -132,9 +132,11 @@ export default {
       })
     },
     updateData(item){
+      // find the order of category
       let findCategory = this.colorList.findIndex((element)=>{
         return element.category === item.category
       });
+      // find the id of it
       let findID = this.colorList[findCategory].id;
       let a = this.colorList[findCategory];
       axios.put(`http://localhost:3000/colorList/${findID}`,a)
@@ -196,9 +198,9 @@ export default {
       let a = this.colorList[findCategory];
       // check the data validation first
       if (R == "" || G == "" || B == "") {
-        alert("Please don't leave any blank");
+        alert("Please don't leave any blank.");
       } else if (R.length >= 4 || G.length >= 4 || B.length >= 4) {
-        alert("Max with three numbers");
+        alert("Max with three numbers.");
       } else if (findCategory == -1){
       // push the data to database
           axios.post(`http://localhost:3000/colorList`,{
@@ -214,7 +216,7 @@ export default {
           category:category,name:name,red: R,green: G,blue: B
         });
         let findID = this.colorList[findCategory].id;
-        axios.post(`http://localhost:3000/colorList/${findID}`,a)
+        axios.put(`http://localhost:3000/colorList/${findID}`,a)
         .finally(() => {
           this.refresh();
         });
