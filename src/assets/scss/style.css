@@ -97,6 +97,7 @@ body {
   text-align: center;
   padding: 10px;
   color: #696969;
+  font-weight: bold;
 }
 
 .outer-wrap .side-bar label {
@@ -105,6 +106,7 @@ body {
   text-align: center;
   padding: 10px;
   color: #696969;
+  font-weight: bold;
 }
 
 .outer-wrap .side-bar input {
@@ -202,10 +204,6 @@ body {
   border-radius: 10px;
 }
 
-.outer-wrap .main-body .all-the-color .card .card-body-editing {
-  text-align: center;
-}
-
 .outer-wrap .main-body .all-the-color .card .card-body {
   text-align: center;
 }
@@ -216,9 +214,19 @@ body {
   margin: auto;
   padding: 20px;
   color: #696969;
+  font-weight: bold;
+}
+
+.outer-wrap .main-body .all-the-color .card .card-body .btn {
+  display: none;
+}
+
+.outer-wrap .main-body .all-the-color .card .card-body:hover .btn {
+  display: inline;
 }
 
 .outer-wrap .main-body .all-the-color .card .card-body-editing {
+  text-align: center;
   margin-bottom: 10px;
 }
 

@@ -1,14 +1,28 @@
 {
   "colorList": [
     {
-      "category": "3",
+      "category": "RGB",
       "list": [
         {
-          "category": "3",
-          "name": "ˇ",
-          "red": "30",
-          "green": "230",
-          "blue": "30"
+          "category": "RGB",
+          "name": "blue",
+          "red": "33",
+          "green": "3",
+          "blue": "333"
+        },
+        {
+          "category": "RGB",
+          "name": "red",
+          "red": "345",
+          "green": "3",
+          "blue": "33"
+        },
+        {
+          "category": "RGB",
+          "name": "yellow",
+          "red": "343",
+          "green": "343",
+          "blue": "43"
         }
       ],
       "id": 1

@@ -91,13 +91,16 @@
 import CreateColor from "./components/CreateColor.vue";
 import EditedColor from "./components/EditedColor.vue";
 import ColorComponent from "./components/ColorComponent.vue";
-import axios from 'axios';
+import axios from "axios";
+
+const axiosClient = axios.create({ baseURL: "" });
+
 export default {
   name: "App",
   components: {
     CreateColor,
     EditedColor,
-    ColorComponent
+    ColorComponent,
   },
   data() {
     return {
@@ -105,7 +108,7 @@ export default {
       green: 0,
       blue: 0,
       id: 1,
-      name:"",
+      name: "",
       category: "",
       editing: null,
       editingColorRed: 0,
@@ -122,44 +125,43 @@ export default {
     };
   },
   methods: {
-    refresh(){
-      axios.get('http://localhost:3000/colorList/')
-      .then(res => {
-        this.colorList = res.data;
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+    refresh() {
+      axiosClient
+        .get("/colorList/")
+        .then((res) => {
+          this.colorList = res.data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
-    updateData(item){
+    updateData(item) {
       // find the order of category
-      let findCategory = this.colorList.findIndex((element)=>{
-        return element.category === item.category
+      let findCategory = this.colorList.findIndex((element) => {
+        return element.category === item.category;
       });
       // find the id of it
       let findID = this.colorList[findCategory].id;
       let a = this.colorList[findCategory];
-      axios.put(`http://localhost:3000/colorList/${findID}`,a)
-      .finally(() => {
+      axiosClient.put(`/colorList/${findID}`, a).finally(() => {
         this.refresh();
       });
     },
     deleteColor(item) {
-      let findCategory = this.colorList.findIndex((element)=>{
-          return element.category === item.category
+      let findCategory = this.colorList.findIndex((element) => {
+        return element.category === item.category;
       });
-      let findID = this.colorList[findCategory].id
+      let findID = this.colorList[findCategory].id;
       let obj = this.colorList[findCategory].list.indexOf(item);
       let colorListLength = this.colorList[findCategory].list.length;
-      if(colorListLength === 1){
+      if (colorListLength === 1) {
         // delete the color including the category
-        axios.delete(`http://localhost:3000/colorList/${findID}`)
-        .finally(() => {
+        axiosClient.delete(`/colorList/${findID}`).finally(() => {
           this.refresh();
         });
-      }else{
+      } else {
         //delete the color in the category only
-        this.colorList[findCategory].list.splice(obj,1);
+        this.colorList[findCategory].list.splice(obj, 1);
         this.updateData(item);
       }
     },
@@ -192,8 +194,8 @@ export default {
       let category = editedColors.editedCategory;
       let name = editedColors.editedName;
       let colorList = this.colorList;
-      let findCategory = colorList.findIndex((element)=>{
-          return element.category === category;
+      let findCategory = colorList.findIndex((element) => {
+        return element.category === category;
       });
       let a = this.colorList[findCategory];
       // check the data validation first
@@ -201,31 +203,36 @@ export default {
         alert("Please don't leave any blank.");
       } else if (R.length >= 4 || G.length >= 4 || B.length >= 4) {
         alert("Max with three numbers.");
-      } else if (findCategory == -1){
-      // push the data to database
-          axios.post(`http://localhost:3000/colorList`,{
-          "category":category,
-          "list":[{category:category,name:name,red: R,green: G,blue: B}]
+      } else if (findCategory == -1) {
+        // push the data to database
+        axiosClient
+          .post(`/colorList`, {
+            category: category,
+            list: [
+              { category: category, name: name, red: R, green: G, blue: B },
+            ],
           })
           .finally(() => {
             this.refresh();
           });
-      }
-      else{
+      } else {
         this.colorList[findCategory].list.push({
-          category:category,name:name,red: R,green: G,blue: B
+          category: category,
+          name: name,
+          red: R,
+          green: G,
+          blue: B,
         });
         let findID = this.colorList[findCategory].id;
-        axios.put(`http://localhost:3000/colorList/${findID}`,a)
-        .finally(() => {
+        axiosClient.put(`/colorList/${findID}`, a).finally(() => {
           this.refresh();
         });
       }
-    }
+    },
   },
-  mounted: function () {
+  mounted: function() {
     this.refresh();
-  }
+  },
 };
 </script>
 
