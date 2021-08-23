@@ -164,7 +164,6 @@ body{
 				.color-box{
 					width:120px;
 					height:120px;
-					//border-radius: 50%;
 					margin: auto;
 					border-radius: 10px;
 				}
@@ -179,14 +178,11 @@ body{
 						font-weight:bold;
 					}
 					.btn{
-						display: none;
-					}
-				}
-				.card-body:hover{
-					.btn{
 						display: inline;
 					}
 				}
+				
+
 
 				.card-body-editing{
 					text-align: center;
@@ -210,6 +206,7 @@ body{
 				label{
 					font-family:fantasy,monospace;
 					padding: 5px;
+					font-weight:bold;
 				}
 			}
 		}

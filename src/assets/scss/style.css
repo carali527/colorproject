@@ -218,10 +218,6 @@ body {
 }
 
 .outer-wrap .main-body .all-the-color .card .card-body .btn {
-  display: none;
-}
-
-.outer-wrap .main-body .all-the-color .card .card-body:hover .btn {
   display: inline;
 }
 
@@ -249,6 +245,7 @@ body {
 .outer-wrap .main-body .all-the-color .card label {
   font-family: fantasy,monospace;
   padding: 5px;
+  font-weight: bold;
 }
 
 footer p {
