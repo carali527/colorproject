@@ -209,9 +209,10 @@ export default {
       });
       let a = this.colorList[findCategory];
       // check the data validation first
-      if (R == "" || G == "" || B == "") {
-        alert("Please give it 0 at least.");
-      } else if(R < 0 || G < 0 || B < 0){
+      R = (!R)? 0 : R;
+      G = (!G)? 0 : G;
+      B = (!B)? 0 : B;
+      if(typeof R < 0 || G < 0 || B < 0){
         alert("Note:The number range will be 0 to 255.");
       }
       else if (R > 255 || G > 255 || B > 255) {
