@@ -93,7 +93,7 @@ import EditedColor from "./components/EditedColor.vue";
 import ColorComponent from "./components/ColorComponent.vue";
 import axios from "axios";
 
-const axiosClient = axios.create({ baseURL: "" });
+const axiosClient = axios.create({ baseURL: "http://localhost:3000" });
 
 export default {
   name: "App",
@@ -173,14 +173,14 @@ export default {
       this.editingName = item.name;
     },
     completeColor(item) {
-      if(!this.editingColorRed || !this.editingColorGreen || !this.editingColorBlue){
-        alert("Please give it 0 at least.");
+      if(this.editingColorRed === "" || this.editingColorGreen === "" || this.editingColorBlue === ""){
+        alert("Please don't leave any blank.");
       }
       else if(this.editingColorRed < 0 || this.editingColorGreen < 0 || this.editingColorBlue < 0){
         alert("The number range will be 0 to 255.");
       }
       else if(this.editingColorRed >255 || this.editingColorGreen >255 || this.editingColorBlue >255){
-        alert("Please don't let the number over 255, it will be assumed to be 255.");
+        alert("Max with three numbers and don't let the number over 255.");
       }else{
         item.red = this.editingColorRed;
         item.green = this.editingColorGreen;
@@ -212,7 +212,7 @@ export default {
       R = (!R)? 0 : R;
       G = (!G)? 0 : G;
       B = (!B)? 0 : B;
-      if(typeof R < 0 || G < 0 || B < 0){
+      if(R < 0 || G < 0 || B < 0){
         alert("Note:The number range will be 0 to 255.");
       }
       else if (R > 255 || G > 255 || B > 255) {

@@ -20,6 +20,7 @@
   <label for="red"
     >Red：<input
       id="red"
+      type="number"
       placeholder="The range is 0 to 255."
       maxlength="3"
       :value="editedRed"
@@ -30,6 +31,7 @@
     <label for="green"
     >Green：<input
       id="green"
+      type="number"
       placeholder="The range is 0 to 255."
       maxlength="3"
       :value="editedGreen"
@@ -40,6 +42,7 @@
     <label for="blue"
     >Blue：<input
       id="blue"
+      type="number"
       placeholder="The range is 0 to 255."
       maxlength="3"
       :value="editedBlue"
