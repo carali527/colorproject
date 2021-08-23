@@ -7,21 +7,14 @@
           "category": "RGB",
           "name": "blue",
           "red": "33",
-          "green": "3",
-          "blue": "333"
-        },
-        {
-          "category": "RGB",
-          "name": "red",
-          "red": "345",
-          "green": "3",
-          "blue": "33"
+          "green": "234",
+          "blue": "234"
         },
         {
           "category": "RGB",
           "name": "yellow",
-          "red": "343",
-          "green": "343",
+          "red": "234",
+          "green": "234",
           "blue": "43"
         }
       ],

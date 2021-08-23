@@ -15,7 +15,7 @@
       <input
         id="red"
         type="number"
-        placeholder="Max with three numbers"
+        placeholder="0 to 255."
         maxlength="3"
         :value="editedRed"
         @input="$emit('update:editedRed', $event.target.value)"
@@ -27,7 +27,7 @@
       <input
         id="green"
         type="number"
-        placeholder="Max with three numbers"
+        placeholder="0 to 255."
         maxlength="3"
         :value="editedGreen"
         @input="$emit('update:editedGreen', $event.target.value)"
@@ -39,7 +39,7 @@
       <input
         id="blue"
         type="number"
-        placeholder="Max with three numbers"
+        placeholder="0 to 255."
         maxlength="3"
         :value="editedBlue"
         @input="$emit('update:editedBlue', $event.target.value)"

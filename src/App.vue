@@ -173,12 +173,22 @@ export default {
       this.editingName = item.name;
     },
     completeColor(item) {
-      item.red = this.editingColorRed;
-      item.green = this.editingColorGreen;
-      item.blue = this.editingColorBlue;
-      item.name = this.editingName;
-      this.updateData(item);
-      this.cancel();
+      if(!this.editingColorRed || !this.editingColorGreen || !this.editingColorBlue){
+        alert("Please give it 0 at least.");
+      }
+      else if(this.editingColorRed < 0 || this.editingColorGreen < 0 || this.editingColorBlue < 0){
+        alert("The number range will be 0 to 255.");
+      }
+      else if(this.editingColorRed >255 || this.editingColorGreen >255 || this.editingColorBlue >255){
+        alert("Please don't let the number over 255, it will be assumed to be 255.");
+      }else{
+        item.red = this.editingColorRed;
+        item.green = this.editingColorGreen;
+        item.blue = this.editingColorBlue;
+        item.name = this.editingName;
+        this.updateData(item);
+        this.cancel();
+      }
     },
     cancel() {
       this.editing = null;
@@ -200,9 +210,12 @@ export default {
       let a = this.colorList[findCategory];
       // check the data validation first
       if (R == "" || G == "" || B == "") {
-        alert("Please don't leave any blank.");
-      } else if (R.length >= 4 || G.length >= 4 || B.length >= 4) {
-        alert("Max with three numbers.");
+        alert("Please give it 0 at least.");
+      } else if(R < 0 || G < 0 || B < 0){
+        alert("Note:The number range will be 0 to 255.");
+      }
+      else if (R > 255 || G > 255 || B > 255) {
+        alert("Please don't let the number over 255, it will be assumed to be 255.");
       } else if (findCategory == -1) {
         // push the data to database
         axiosClient
@@ -238,12 +251,4 @@ export default {
 
 <style>
 @import "./assets/scss/style.css";
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

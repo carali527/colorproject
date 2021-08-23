@@ -20,8 +20,7 @@
   <label for="red"
     >Red：<input
       id="red"
-      type="number"
-      placeholder="Max with three numbers"
+      placeholder="The range is 0 to 255."
       maxlength="3"
       :value="editedRed"
       @input="$emit('update:editedRed', $event.target.value)"
@@ -31,8 +30,7 @@
     <label for="green"
     >Green：<input
       id="green"
-      type="number"
-      placeholder="Max with three numbers"
+      placeholder="The range is 0 to 255."
       maxlength="3"
       :value="editedGreen"
       @input="$emit('update:editedGreen', $event.target.value)"
@@ -42,8 +40,7 @@
     <label for="blue"
     >Blue：<input
       id="blue"
-      type="number"
-      placeholder="Max with three numbers"
+      placeholder="The range is 0 to 255."
       maxlength="3"
       :value="editedBlue"
       @input="$emit('update:editedBlue', $event.target.value)"
