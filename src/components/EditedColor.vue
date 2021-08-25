@@ -2,7 +2,7 @@
   <slot></slot>
   <div class="card-body-editing">
     <label for="name"
-      >Name:<input
+      >Name：<input
         id="name"
         type="text"
         placeholder="Name"
@@ -23,7 +23,7 @@
         required
     /></label>
     <label for="green"
-      >Green：
+      >Green:  
       <input
         id="green"
         type="number"

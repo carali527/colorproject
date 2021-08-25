@@ -1,6 +1,6 @@
 <template>
   <label for="category"
-      >Category:<input
+      >Category：<input
         id="category"
         type="text"
         placeholder="Category"
@@ -9,7 +9,7 @@
         required
     /></label>
   <label for="name"
-      >Name:<input
+      >Name：<input
         id="name"
         type="text"
         placeholder="Name"

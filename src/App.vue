@@ -93,7 +93,7 @@ import EditedColor from "./components/EditedColor.vue";
 import ColorComponent from "./components/ColorComponent.vue";
 import axios from "axios";
 
-const axiosClient = axios.create({ baseURL: "http://localhost:3000" });
+const axiosClient = axios.create({ baseURL: "" });
 
 export default {
   name: "App",
@@ -248,6 +248,7 @@ export default {
     this.refresh();
   },
 };
+
 </script>
 
 <style>
